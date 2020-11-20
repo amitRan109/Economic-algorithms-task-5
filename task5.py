@@ -8,7 +8,7 @@ class Agent:
     def item_value(self,item_index: int) -> float:
         return self.values[item_index]
 
-def envy_graph(agents:List[Agent], bundles:List[int]):
+def envy_graph(agents:List[Agent], bundles:List[List[int]]):
     G= nx.DiGraph()
     G.add_nodes_from(agents)
     for a in agents: #check if a envy of eneryone else
